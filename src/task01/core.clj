@@ -25,7 +25,7 @@ Example: ['https://github.com/clojure/clojure', 'http://clojure.com/', . . .]"
 (defn link-href [link] (get (node-attrs link) :href))
 
 (defn tags [node]
-  (concat [node] (reduce concat (map tags (node-nontext-children node)))))
+  (cons node (reduce concat (map tags (node-nontext-children node)))))
 
 (defn link? [n] (= (node-name n) :a))
 
