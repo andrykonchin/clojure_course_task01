@@ -19,6 +19,3 @@
 
 (defn -main []
   (println (str "Found " (count (get-links)) " links!")))
-
-(links (parse "clojure_google.html"))
-
